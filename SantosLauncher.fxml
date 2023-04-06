@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<!--
+  ~ Copyright (c)  2015-2016, JAC Systems LLC
+  -->
+
+<BorderPane id="Pane" fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@com/launcher/bg.css" translateX="-1.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.launcher.Controller">
+    <bottom>
+        <GridPane id="pbar" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="22.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="114.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="216.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="128.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="128.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="30.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button id="ebutton" fx:id="lbutton" mnemonicParsing="false" onAction="#Launch" prefWidth="125.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fx:id="limage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Launch.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                        <Button fx:id="ibutton" mnemonicParsing="false" onAction="#handle" prefWidth="125.0" visible="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Install.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="dbutton" mnemonicParsing="false" onAction="#Install" visible="false" GridPane.columnIndex="4" GridPane.halignment="RIGHT">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Download.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ubutton" mnemonicParsing="false" onAction="#Update" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fx:id="uimage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/update.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ChoiceBox fx:id="smenu" prefWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                    </children>
+                </GridPane>
+            <ProgressBar id="pbar" fx:id="pbar" prefHeight="25.0" prefWidth="500.0" progress="0.0" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            </children>
+        </GridPane>
+    </bottom>
+   <left>
+      <GridPane prefHeight="421.0" prefWidth="153.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="30.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="83.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.0" minWidth="10.0" prefWidth="70.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="2.0" prefHeight="12.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="12.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="12.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="172.0" minHeight="0.0" prefHeight="12.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="12.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button id="forumsb" fx:id="forumsb" mnemonicParsing="false" onAction="#Forums" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@forums.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="steamb" mnemonicParsing="false" onAction="#Steam" prefHeight="12.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Steam.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="twitterb" mnemonicParsing="false" onAction="#Twitter" prefHeight="12.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@twitter.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="twitchb" mnemonicParsing="false" onAction="#Twitch" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@twitch.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="storeb" mnemonicParsing="false" onAction="#Store" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@store.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </left>
+   <top>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="765.0" minWidth="10.0" prefWidth="748.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="765.0" minWidth="10.0" prefWidth="22.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="765.0" minWidth="0.0" prefWidth="16.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="6.0" prefWidth="14.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="25.0" minHeight="8.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="cbutton" mnemonicParsing="false" onAction="#Close" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="cimage" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="mbutton" mnemonicParsing="false" onAction="#Minimize" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fx:id="mimage" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <GridPane prefHeight="407.0" prefWidth="445.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="313.0" minHeight="10.0" prefHeight="313.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="133.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="ctitle" prefHeight="44.0" prefWidth="397.0" text="SantosRP Latest Changelog" textFill="#c3c3c3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ProgressBar id="ibar" fx:id="ibar" prefHeight="25.0" prefWidth="500.0" progress="0.0" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <ScrollPane fx:id="spane" hbarPolicy="NEVER" prefHeight="313.0" prefWidth="445.0" GridPane.rowIndex="1" />
+            <Label fx:id="ilabel" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </center>
+   <right>
+      <GridPane fx:id="StatusGP" prefHeight="412.0" prefWidth="168.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="127.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="280.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="365.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="309.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane fx:id="EUGP" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="0.0" prefWidth="35.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="138.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="EULabel" textFill="#c3c3c3" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="USGP" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="0.0" prefWidth="35.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="134.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="USLabel" textFill="#c3c3c3" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </right>
+</BorderPane>

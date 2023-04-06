@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<!--
+  ~ Copyright (c)  2015-2016, JAC Systems LLC
+  -->
+
+<GridPane fx:id="dpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="112.0" prefWidth="570.0" stylesheets="com/launcher/popup.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.launcher.ControllerPop">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="92.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="453.0" minWidth="10.0" prefWidth="433.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="45.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="22.0" minHeight="8.0" prefHeight="13.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="50.0" minHeight="30.0" prefHeight="39.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="abutton" mnemonicParsing="false" onAction="#exit" GridPane.rowIndex="2">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Apply button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="odbutton" mnemonicParsing="false" onAction="#SelectDirect" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ChangePath.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="dlabel" prefWidth="450.0" text="  Select the Garrysmod/garrysmod Directory" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Button fx:id="cbutton" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#exit" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</GridPane>
